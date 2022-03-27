@@ -13,14 +13,14 @@ contract TutorialERC1155 is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155
 
     address private _securityAddress;
 
-    uint256 public constant JimPandaLogo = 0;
-    uint256 public constant PandaBlueShirt = 1;
-    uint256 public constant PandaRedShirt = 2;
+    uint256 public constant NFT1 = 0;
+    uint256 public constant NFT2 = 1;
+    uint256 public constant NFT3 = 2;
 
-    constructor() ERC1155("https://tutorial.jimpanda.com/nft1155/{0}.json") {}
+    constructor() ERC1155("yourWebUrl") {}
 
     function uri(uint256 tokenId) public view virtual override returns (string memory){
-        return(string(abi.encodePacked("https://https://tutorial.jimpanda.com/nft1155/", Strings.toString(tokenId), ".json")));
+        return(string(abi.encodePacked("your Web Url", Strings.toString(tokenId), ".json")));
     }
     
     function setSecurityAddress(address securityAddress) external onlyOwner{
