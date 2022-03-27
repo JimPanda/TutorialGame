@@ -19,7 +19,7 @@ contract TutorialERC721 is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable,
     constructor() ERC721("TutorialERC721", "ERC721") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://tutorial.jimpanda.com/nft721/";
+        return "yourWebUrlAdrress";
     }
 
     function setSecurityAddress(address securityAddress) external onlyOwner{
@@ -83,7 +83,7 @@ contract TutorialERC721 is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable,
     }
 
     function tokenURI(uint256 tokenId) public pure override(ERC721, ERC721URIStorage) returns(string memory){
-        return(string(abi.encodePacked("https://tutorial.jimpanda.com/nft721/", Strings.toString(tokenId), ".json")));
+        return(string(abi.encodePacked("yourWebUrlAdrress", Strings.toString(tokenId), ".json")));
     }
 
     function supportsInterface(bytes4 interfaceId)
