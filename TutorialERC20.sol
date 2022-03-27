@@ -22,7 +22,7 @@ contract TutorialERC20 is Context, IERC20, Ownable{
     address private _itemAdrress;
 
     TutorialERC721 _erc721 = TutorialERC721(ERC721contractAddress);                                // ERC721 Contract
-    TutorialERC1155 _erc1155 = TutorialERC1155(E1155contractAddress);                              // ERC1155 Contract
+    TutorialERC1155 _erc1155 = TutorialERC1155(ERC1155contractAddress);                              // ERC1155 Contract
     address private _gameAddress = GameWalletAddress;                                              // Game Wallet
     uint256 private _nft11552 = 500000000000000000000;                                             // Cost 1155_2 NFT
     uint256 private _nft11551 = 200000000000000000000;                                             // Cost 1155_1 NFT
