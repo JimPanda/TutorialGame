@@ -5,8 +5,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Context.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "Tutorial/TutorialERC721.sol";
-import "Tutorial/TutorialERC1155.sol";
+import "yourDesktopDestination/TutorialERC721.sol";
+import "yourDesktopDestination/TutorialERC1155.sol";
 
 /// @custom:security-contact game@gamename.com
 contract TutorialERC20 is Context, IERC20, Ownable{
@@ -21,9 +21,9 @@ contract TutorialERC20 is Context, IERC20, Ownable{
     address private _characterAdrress;
     address private _itemAdrress;
 
-    TutorialERC721 _erc721 = TutorialERC721(0xe51cf02cCb81109b1F98dF3734313aB5114e2428);                   // ERC721 Contract
-    TutorialERC1155 _erc1155 = TutorialERC1155(0x3779fcA0020023d3694ff6f36285C577F33Bed7f);                // ERC1155 Contract
-    address private _gameAddress = 0xe2d37B2dDbd831c73cd3B12ed3c0eaaED6251756;                     // Game Wallet
+    TutorialERC721 _erc721 = TutorialERC721(ERC721contractAddress);                                // ERC721 Contract
+    TutorialERC1155 _erc1155 = TutorialERC1155(E1155contractAddress);                              // ERC1155 Contract
+    address private _gameAddress = GameWalletAddress;                                              // Game Wallet
     uint256 private _nft11552 = 500000000000000000000;                                             // Cost 1155_2 NFT
     uint256 private _nft11551 = 200000000000000000000;                                             // Cost 1155_1 NFT
     uint256 private _nft721 = 100000000000000000000;                                               // Cost 721 NFT
