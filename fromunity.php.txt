@@ -1,0 +1,24 @@
+<?php
+	$text1 = $_POST["tokenId"];
+	$text2 = $_POST["gamedata"];
+	$file = fopen($_POST["tokenId"].".json", "a");
+	fwrite($file, $text2);
+	fclose($file);
+	$fileName = $_POST["tokenId"].".json";		
+	if($fileError === 0)
+	{
+		if($fileSize < 1000)
+		{
+			$fileDestination = './'.$fileName;
+			move_uploaded_file($fileName, $fileDestination);
+		}
+		else
+		{
+			echo "File is too big!";
+		}
+	}
+	else
+	{
+		echo "There was an error uploading the file!";
+	}
+?>
